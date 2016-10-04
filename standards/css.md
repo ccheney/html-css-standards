@@ -893,7 +893,7 @@ Use sprites whenever possible to improve performance by reducing http requests. 
 When using background images that include text, it's important that there is a text equivalent in the markup itself so that the text is accessible. Use a suitable image replacement technique to keep the text hidden from view.
 
 ```html
-<a href="/home/" class="nav-home">Home</a>
+<a href="/home/" class="nav-home"><span class="isVisuallyHidden">Home</span></a>
 ```
 
 ```css
