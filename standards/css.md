@@ -307,7 +307,7 @@ Use double quotes around generated content values.
 
 ```css
 .selector:before {
-    content: "Chapter:";
+    content: ",";
     display: inline;
 }
 ```
