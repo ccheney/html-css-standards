@@ -333,7 +333,7 @@ When hiding content on a page, choose the appropriate method.
 
 Using `display: none;` or `visibility: hidden;` will hide content from a screen reader.
 
-If content is meant to be available to a screen reader but not to a sighted user, hide the content by using a utility class.
+If content is meant to be available to a screen reader but not to a sighted user, hide the content by using a utility class. If you hide an item on the page that can receive focus, be sure to provide focus state for that item that appears on the page.
 
 ```html
 <h2 class="isVisuallyHidden">Featured Articles</h2>
@@ -341,14 +341,14 @@ If content is meant to be available to a screen reader but not to a sighted user
 
 ```css
 .isVisuallyHidden {
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    position: absolute;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+    overflow: hidden !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: 0 !important;
+    border: 0 !important;
+    position: absolute !important;
+    left: -10000px !important;
+    top: auto !important;
 }
 ```
 
@@ -356,6 +356,7 @@ If content is meant to be available to a screen reader but not to a sighted user
 
 * <http://snook.ca/archives/html_and_css/hiding-content-for-accessibility>
 * <http://webaim.org/techniques/css/invisiblecontent/>
+* <https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html>
 
 ## Focus Styles
 
